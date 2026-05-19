@@ -307,7 +307,7 @@ function App() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden w-full bg-white dark:bg-zinc-950 border-b-2 border-black dark:border-zinc-800 transition-colors overflow-hidden"
+            className="fixed top-16 left-0 z-30 md:hidden w-full bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-b-2 border-black dark:border-zinc-800 shadow-lg transition-colors overflow-hidden"
           >
             <div className="px-4 py-4 flex flex-col gap-4">
               {['home', 'about', 'projects', 'journey', 'contact'].map((item) => (
@@ -448,7 +448,7 @@ function App() {
       <MarqueeBanner />
 
       {/* ABOUT ME SECTION (Bento Grid) */}
-      <section id="about" ref={aboutRef} className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <section id="about" ref={aboutRef} className="max-w-6xl mx-auto px-4 sm:px-6 py-20 scroll-mt-16">
 
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-16">
@@ -620,7 +620,7 @@ function App() {
       </section>
 
       {/* SELECTED WORKS / PROJECTS SECTION */}
-      <section id="projects" ref={projectsRef} className="border-y-2 border-black dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 py-20 transition-colors">
+      <section id="projects" ref={projectsRef} className="border-y-2 border-black dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 py-20 transition-colors scroll-mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
           {/* Section Heading */}
@@ -814,7 +814,7 @@ function App() {
       </section>
 
       {/* JOURNEY / TIMELINE SECTION */}
-      <section id="journey" ref={journeyRef} className="py-20">
+      <section id="journey" ref={journeyRef} className="py-20 scroll-mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
 
           {/* Section Heading */}
@@ -867,7 +867,7 @@ function App() {
       </section>
 
       {/* CONTACT SECTION & FORM */}
-      <section id="contact" ref={contactRef} className="border-t-2 border-black dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 py-20 transition-colors">
+      <section id="contact" ref={contactRef} className="border-t-2 border-black dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 py-20 transition-colors scroll-mt-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Section Heading */}
