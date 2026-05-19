@@ -197,11 +197,20 @@ function App() {
 
   // Navigation action helper
   const scrollTo = (refId) => {
-    const el = document.getElementById(refId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Close the mobile menu first
     setMobileMenuOpen(false);
+    
+    // Add a slight delay to ensure mobile browsers don't cancel the smooth scroll
+    // due to the simultaneous DOM animation / touch event termination.
+    setTimeout(() => {
+      const el = document.getElementById(refId);
+      if (el) {
+        // Calculate precise offset considering the 64px (h-16) sticky header
+        const yOffset = -64; 
+        const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 150);
   };
 
   return (
