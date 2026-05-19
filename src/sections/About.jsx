@@ -87,6 +87,8 @@ export default function About({ aboutRef, triggerToast }) {
                 className="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl border-2 border-black dark:border-white overflow-hidden mb-4 relative z-10 shadow-lg group-hover:scale-105 cursor-zoom-in transition-transform duration-300"
               >
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={profileImg}
                   alt="Yanuar Profile Monochrome portrait"
                   className="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
@@ -163,6 +165,7 @@ export default function About({ aboutRef, triggerToast }) {
               className="relative max-w-[90vw] max-h-[80vh] md:max-w-[450px] aspect-square rounded-2xl border-4 border-black dark:border-white overflow-hidden bg-white dark:bg-zinc-900 shadow-2xl flex items-center justify-center cursor-default"
             >
               <img
+                decoding="async"
                 src={profileImg}
                 alt="Yanuar Profile Zoomed"
                 className="w-full h-full object-cover filter contrast-110"

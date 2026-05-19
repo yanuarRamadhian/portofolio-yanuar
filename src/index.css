@@ -83,3 +83,20 @@ code, pre {
 .snap-section {
   scroll-snap-align: start;
 }
+
+/* GPU Hardware-Composited Infinite Marquee */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+

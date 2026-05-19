@@ -63,7 +63,7 @@ function App() {
     }, 150);
   };
 
-  // Scroll Spy logic
+  // Scroll Spy logic with lightweight 80ms throttle to prevent high-frequency CPU thrashing
   useEffect(() => {
     const sections = [
       { id: 'home', ref: homeRef },
@@ -73,7 +73,13 @@ function App() {
       { id: 'contact', ref: contactRef },
     ];
 
+    let lastScrollTime = 0;
+
     const handleScroll = () => {
+      const now = Date.now();
+      if (now - lastScrollTime < 80) return; // limit scroll evaluations to once every 80ms
+      lastScrollTime = now;
+
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {

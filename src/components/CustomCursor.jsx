@@ -21,16 +21,16 @@ export default function CustomCursor() {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
       
-      const el = document.elementFromPoint(e.clientX, e.clientY);
+      const el = e.target;
       if (el) {
-        const computedStyle = window.getComputedStyle(el);
+        const tagName = el.tagName ? el.tagName.toLowerCase() : '';
         const clickable = 
-          computedStyle.cursor === 'pointer' || 
-          computedStyle.cursor === 'zoom-in' ||
-          el.tagName.toLowerCase() === 'button' || 
-          el.tagName.toLowerCase() === 'a' ||
+          tagName === 'button' || 
+          tagName === 'a' ||
           el.closest('button') || 
-          el.closest('a');
+          el.closest('a') ||
+          el.closest('.cursor-zoom-in') ||
+          (el.classList && (el.classList.contains('cursor-pointer') || el.classList.contains('cursor-zoom-in')));
         setIsPointer(!!clickable);
       }
     };
