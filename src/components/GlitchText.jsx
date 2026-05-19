@@ -44,15 +44,13 @@ export default function GlitchText({ text, className = '' }) {
         <motion.span
           key={index}
           variants={child}
-          className="inline-block"
+          className="inline-block text-zinc-900 dark:text-zinc-50 hover:text-emerald-500 transition-colors duration-200"
           style={{ 
             // Handle spaces properly so words don't collapse
             marginRight: letter === ' ' ? '0.25em' : '0' 
           }}
           whileHover={{ 
             scale: 1.1, 
-            color: '#10b981', // emerald-500
-            transition: { duration: 0.2 } 
           }}
         >
           {letter === ' ' ? '\u00A0' : letter}
