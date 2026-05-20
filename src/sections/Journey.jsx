@@ -39,7 +39,7 @@ export default function Journey({ journeyRef }) {
               </div>
 
               {/* Dynamic wiggling timeline folder card */}
-              <TimelineFolder index={idx}>
+              <TimelineFolder year={journey.date} title={journey.role} images={journey.images}>
                 {/* Header info */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-3 mb-3">
                   <div>

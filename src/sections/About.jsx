@@ -105,38 +105,89 @@ export default function About({ aboutRef, triggerToast }) {
 
           {/* Card 3: Education */}
           <ScrollReveal delay={0.15}>
-            <div className="p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
-              <div className="flex items-center justify-between mb-4">
-                <span className="font-mono text-[9px] font-black uppercase px-2.5 py-1 bg-zinc-100 dark:bg-zinc-800 border border-black dark:border-zinc-700 rounded-lg">
-                  {language === 'id' ? 'PENDIDIKAN' : 'EDUCATION'}
-                </span>
-                <GraduationCap size={20} className="text-zinc-400" />
-              </div>
+            <div className="h-full p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
               <div>
-                <h4 className="font-black text-sm sm:text-base mb-1 uppercase text-zinc-900 dark:text-white tracking-tight">
-                  {t.about.edu_title}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-[9px] font-black uppercase px-2.5 py-1 bg-zinc-100 dark:bg-zinc-800 border border-black dark:border-zinc-700 rounded-lg">
+                    {t.about.education}
+                  </span>
+                  <GraduationCap size={20} className="text-zinc-400" />
+                </div>
+                <h4 className="font-black text-lg tracking-tight mb-1 text-zinc-900 dark:text-white uppercase leading-tight">
+                  {t.about.edu_inst}
                 </h4>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 font-bold mb-3 font-mono">
-                  {t.about.edu_date}
+                <p className="text-xs font-bold text-zinc-500 dark:text-zinc-400 font-mono mb-4 uppercase">
+                  {t.about.edu_major}
                 </p>
-                <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
-                  {t.about.edu_desc}
-                </p>
+
+                <div className="space-y-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-6 font-mono">
+                  <p>✦ {t.about.edu_grad}</p>
+                  <p>✦ {t.about.edu_gpa}</p>
+                </div>
+              </div>
+
+              <div>
+                <div className="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black font-bold text-[9px] sm:text-[10px] tracking-wider uppercase rounded-lg inline-block border border-black dark:border-white shadow">
+                  🚀 {t.about.edu_satisfy}
+                </div>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Card 4: Workflow details */}
-          <ScrollReveal delay={0.2} className="md:col-span-2">
-            <div className="p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900/50 shadow-md hover:shadow-lg transition-colors flex flex-col justify-between md:flex-row md:items-center gap-6">
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-3">
-                  <Layers size={18} className="text-emerald-500" />
-                  <h4 className="font-black text-sm sm:text-base uppercase text-zinc-900 dark:text-white tracking-tight">
-                    {t.about.workflow_title}
-                  </h4>
+          {/* Card 4: Tech Stack columns */}
+          <ScrollReveal delay={0.2}>
+            <div className="h-full p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-4 text-emerald-500">
+                  <Layers size={18} />
+                  <span className="font-bold text-xs uppercase tracking-widest font-mono text-zinc-400 dark:text-zinc-500">
+                    {t.about.tech_title}
+                  </span>
                 </div>
-                <p className="text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 font-medium">
+
+                <div className="grid grid-cols-2 gap-3 text-xs font-bold font-mono">
+                  <div>
+                    <h5 className="text-[10px] uppercase text-zinc-400 dark:text-zinc-500 mb-2">Systems & Net</h5>
+                    <ul className="space-y-1.5 text-zinc-700 dark:text-zinc-300">
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" /> MikroTik</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Networking</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> IT Support</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-purple-500" /> Troubleshooting</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-slate-500" /> Data Entry</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="text-[10px] uppercase text-zinc-400 dark:text-zinc-500 mb-2">Web & Analytics</h5>
+                    <ul className="space-y-1.5 text-zinc-700 dark:text-zinc-300">
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-sky-400" /> Laravel</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-yellow-500" /> WordPress</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-rose-500" /> MySQL</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-indigo-500" /> Data Analysis</li>
+                      <li className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-zinc-500" /> MS Office</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Card 5: Core Philosophy & Workflow */}
+          <ScrollReveal delay={0.25}>
+            <div className="h-full p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <h4 className="font-bold text-xs uppercase tracking-widest font-mono text-zinc-400 dark:text-zinc-500 mb-2">
+                  {t.about.philosophy_title}
+                </h4>
+                <p className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400 font-semibold mb-4">
+                  {t.about.philosophy_desc}
+                </p>
+              </div>
+
+              <div className="border-t border-zinc-200 dark:border-zinc-800 pt-4">
+                <h5 className="font-bold text-[10px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-mono mb-1.5">
+                  {t.about.workflow_title}
+                </h5>
+                <p className="text-xs text-zinc-700 dark:text-zinc-300 font-bold font-mono">
                   {t.about.workflow_desc}
                 </p>
               </div>

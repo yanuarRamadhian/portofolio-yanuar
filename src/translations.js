@@ -101,18 +101,20 @@ export const translations = {
       click_info: "PROJECT ARCHIVE - Click Folder",
       list: [
         {
-          year: "2023 - Present",
-          title: "IT Support Specialist, Data Analyst & Data Entry",
-          desc: "CV Alam Organik Makmur. Managed MikroTik RB4011 network infrastructure, implemented PCC load balancing dual ISP, configured Queue Tree + PCQ bandwidth management, automated router backup & Netwatch monitoring, managed NAS & CCTV traffic optimization, website maintenance using WordPress + Elementor, and performed data reporting/customer database analysis.",
+          company: "CV Alam Organik Makmur",
+          role: "IT Support Specialist, Data Analyst & Data Entry",
+          date: "Jan 2023 - Present",
+          desc: "✦ Managed MikroTik RB4011 network infrastructure\n✦ Implemented PCC load balancing dual ISP\n✦ Configured Queue Tree + PCQ bandwidth management\n✦ Automated router backup & Netwatch monitoring\n✦ Managed NAS & CCTV traffic optimization\n✦ Website maintenance using WordPress + Elementor\n✦ Data reporting and customer database analysis",
           images: [
             "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=300&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=300&auto=format&fit=crop"
           ]
         },
         {
-          year: "2019 - 2022",
-          title: "Administrative Assistant",
-          desc: "Notaris PPAT R. Ira Laksana Dewi. Managed notary archives, customer transactions logging, data entry of official deeds, client scheduling, and office administrative tasks.",
+          company: "Notaris PPAT R. Ira Laksana Dewi",
+          role: "Administrative Assistant",
+          date: "Jun 2019 - Dec 2022",
+          desc: "✦ Managed notary archives & customer transaction logs\n✦ Performed data entry of official deeds & client scheduling\n✦ Handled office administrative tasks efficiently",
           images: [
             "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=300&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=300&auto=format&fit=crop"
@@ -237,18 +239,20 @@ export const translations = {
       click_info: "ARSIP PROYEK - Klik Folder",
       list: [
         {
-          year: "2023 - Sekarang",
-          title: "IT Support Specialist, Data Analyst & Data Entry",
-          desc: "CV Alam Organik Makmur. Mengelola infrastruktur jaringan MikroTik RB4011, mengimplementasikan PCC load balancing dual ISP, mengonfigurasi manajemen bandwidth Queue Tree + PCQ, mengotomatiskan router backup & monitoring Netwatch, mengelola optimalisasi lalu lintas NAS & CCTV, pemeliharaan situs web menggunakan WordPress + Elementor, serta analisis basis data pelanggan dan pelaporan data.",
+          company: "CV Alam Organik Makmur",
+          role: "IT Support Specialist, Data Analyst & Data Entry",
+          date: "Jan 2023 - Sekarang",
+          desc: "✦ Mengelola infrastruktur jaringan MikroTik RB4011\n✦ Mengimplementasikan load balancing PCC dual ISP\n✦ Mengonfigurasi manajemen bandwidth Queue Tree + PCQ\n✦ Mengotomatiskan router backup & monitoring Netwatch\n✦ Mengelola optimalisasi lalu lintas NAS & CCTV\n✦ Pemeliharaan situs web menggunakan WordPress + Elementor\n✦ Analisis basis data pelanggan dan pelaporan data",
           images: [
             "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=300&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=300&auto=format&fit=crop"
           ]
         },
         {
-          year: "2019 - 2022",
-          title: "Administrative Assistant",
-          desc: "Notaris PPAT R. Ira Laksana Dewi. Mengelola arsip notaris, pencatatan transaksi pelanggan, entri data akta resmi, penjadwalan klien, dan tugas administrasi kantor lainnya.",
+          company: "Notaris PPAT R. Ira Laksana Dewi",
+          role: "Administrative Assistant",
+          date: "Jun 2019 - Des 2022",
+          desc: "✦ Mengelola arsip notaris & pencatatan transaksi pelanggan\n✦ Melakukan entri data akta resmi & penjadwalan klien\n✦ Menyelesaikan tugas administrasi kantor lainnya secara efisien",
           images: [
             "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=300&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=300&auto=format&fit=crop"
