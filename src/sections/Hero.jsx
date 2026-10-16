@@ -100,7 +100,7 @@ export default function Hero({ homeRef, scrollTo }) {
             <MagneticWrapper>
               <button
                 onClick={() => scrollTo('contact')}
-                className="w-full sm:w-auto px-6 py-3 bg-white text-black dark:bg-zinc-900 dark:text-white rounded-xl font-bold text-xs uppercase border-2 border-black dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-850 transition-colors shadow-md"
+                className="w-full sm:w-auto px-6 py-3 bg-white text-black dark:bg-zinc-900 dark:text-white rounded-xl font-bold text-xs uppercase border-2 border-black dark:border-zinc-700 hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-800 dark:hover:text-white dark:hover:border-zinc-500 transition-colors shadow-md"
               >
                 {language === 'id' ? 'Hubungi Saya' : 'Contact Me'}
               </button>
