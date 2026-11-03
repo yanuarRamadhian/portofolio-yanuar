@@ -4,6 +4,7 @@ import { FileDown, GraduationCap, Layers, X } from 'lucide-react';
 import { useApp } from '../AppContext';
 import ScrollReveal from '../components/ScrollReveal';
 import MagneticWrapper from '../components/MagneticWrapper';
+import LanyardCard from '../components/LanyardCard';
 import profileImg from '../assets/profile.jpeg';
 
 export default function About({ aboutRef, triggerToast }) {
@@ -44,9 +45,9 @@ export default function About({ aboutRef, triggerToast }) {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          {/* Card 1: Main Bio (Col-span-2) */}
-          <ScrollReveal className="md:col-span-2">
-            <div className="h-full p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col justify-between shadow-md transition-all hover:shadow-lg">
+          {/* Card 1: Main Bio (Full Width md:col-span-3) */}
+          <ScrollReveal className="md:col-span-3">
+            <div className="h-full p-6 sm:p-8 rounded-2xl border-2 border-black dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col justify-between shadow-md transition-all hover:shadow-lg">
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
@@ -75,32 +76,12 @@ export default function About({ aboutRef, triggerToast }) {
             </div>
           </ScrollReveal>
 
-          {/* Card 2: Monochromatic Avatar Grid */}
-          <ScrollReveal delay={0.1}>
-            <div className="h-full p-6 rounded-2xl border-2 border-black dark:border-zinc-800 bg-zinc-150 dark:bg-zinc-900/50 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-md transition-colors">
-              {/* Background grid lines */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-
-              {/* Avatar container */}
-              <div
-                onClick={() => setIsProfileZoomed(true)}
-                className="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl border-2 border-black dark:border-white overflow-hidden mb-4 relative z-10 shadow-lg group-hover:scale-105 cursor-zoom-in transition-transform duration-300"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src={profileImg}
-                  alt="Yanuar Profile Monochrome portrait"
-                  className="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-
-              {/* Stats Tag */}
-              <div className="relative z-10 flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-mono text-[9px] font-bold uppercase rounded-full mb-3 shadow-inner">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>ramadhian1999@gmail.com</span>
-              </div>
-            </div>
+          {/* Full-Width Frameless Interactive 3D Lanyard ID Card */}
+          <ScrollReveal delay={0.1} className="md:col-span-3">
+            <LanyardCard
+              onZoomPhoto={() => setIsProfileZoomed(true)}
+              language={language}
+            />
           </ScrollReveal>
 
           {/* Card 3: Education */}

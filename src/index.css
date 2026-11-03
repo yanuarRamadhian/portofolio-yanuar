@@ -100,3 +100,68 @@ code, pre {
   will-change: transform;
 }
 
+/* Tech Orbit Keyframes & Animations */
+@keyframes orbit-cw {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbit-ccw {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes counter-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes counter-ccw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit-cw {
+  animation: orbit-cw 46s linear infinite;
+  will-change: transform;
+}
+
+.animate-orbit-ccw {
+  animation: orbit-ccw 58s linear infinite;
+  will-change: transform;
+}
+
+.animate-counter-cw {
+  animation: counter-cw 46s linear infinite;
+  will-change: transform;
+}
+
+.animate-counter-ccw {
+  animation: counter-ccw 58s linear infinite;
+  will-change: transform;
+}
+
+/* Pause whole orbital system smoothly when user hovers over any chip */
+.orbit-paused:hover .animate-orbit-cw,
+.orbit-paused:hover .animate-orbit-ccw,
+.orbit-paused:hover .animate-counter-cw,
+.orbit-paused:hover .animate-counter-ccw {
+  animation-play-state: paused;
+}
+

@@ -4,7 +4,7 @@ import { Sparkles, ArrowRight, ChevronDown } from 'lucide-react';
 import { useApp } from '../AppContext';
 import InteractiveGrid from '../components/InteractiveGrid';
 import CodeTicker from '../components/CodeTicker';
-import FloatingBadge from '../components/FloatingBadge';
+import TechOrbit from '../components/TechOrbit';
 import GlitchText from '../components/GlitchText';
 import MagneticWrapper from '../components/MagneticWrapper';
 import { CoderAvatar, SleepingGhost } from '../components/AnimatedCharacters';
@@ -37,30 +37,11 @@ export default function Hero({ homeRef, scrollTo }) {
       {/* Animated Terminal Code Ticker Backdrop */}
       <CodeTicker />
       
-      {/* Floating spring physics badges - Hidden on mobile, visible on desktop at safe edges */}
-      <div className="absolute inset-0 z-20 pointer-events-none hidden md:block">
-        <FloatingBadge className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20" style={{ top: '15%', left: '8%' }}>
-          {t.hero.pills[0]}
-        </FloatingBadge>
-        <FloatingBadge className="bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20" style={{ top: '15%', right: '8%' }}>
-          {t.hero.pills[1]}
-        </FloatingBadge>
-        <FloatingBadge className="bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20" style={{ top: '24%', left: '3%' }}>
-          {t.hero.pills[2]}
-        </FloatingBadge>
-        <FloatingBadge className="bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20" style={{ top: '24%', right: '3%' }}>
-          {t.hero.pills[3]}
-        </FloatingBadge>
-        <FloatingBadge className="bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20" style={{ top: '72%', left: '10%' }}>
-          {t.hero.pills[4]}
-        </FloatingBadge>
-        <FloatingBadge className="bg-slate-500/10 text-slate-600 dark:text-slate-400 border border-slate-500/20" style={{ top: '72%', right: '10%' }}>
-          {t.hero.pills[5]}
-        </FloatingBadge>
-      </div>
+      {/* Dynamic Planetary Tech Orbit Constellation */}
+      <TechOrbit />
 
-      {/* Center Main Text */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 relative z-10">
+      {/* Center Main Text - Elevated z-20 so orbit chips always glide BEHIND the text */}
+      <div className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 relative z-20 pointer-events-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
